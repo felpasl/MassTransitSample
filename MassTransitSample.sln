@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28705.295
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MassTransitSample.Web", "MassTransitSample.Web\MassTransitSample.Web.csproj", "{675106C5-64E2-487B-8A4E-3244BDE50424}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MassTransitSample.Cmd", "MassTransitSample.Console\MassTransitSample.Cmd.csproj", "{7E7D963F-F4C6-4C69-BEF9-DC35812EF35F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MassTransitSample.Web", "MassTransitSample.Web\MassTransitSample.Web.csproj", "{675106C5-64E2-487B-8A4E-3244BDE50424}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{793E0EEF-1100-40B1-9670-620FB5923852}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MassTransitSample.Domain", "MassTransitSample.Domain\MassTransitSample.Domain.csproj", "{AA79B9E0-BC6E-47FD-B5DF-319B4052351A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MassTransitSample.Domain", "MassTransitSample.Domain\MassTransitSample.Domain.csproj", "{AA79B9E0-BC6E-47FD-B5DF-319B4052351A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MassTransitSample.Cmd", "MassTransitSample.Cmd\MassTransitSample.Cmd.csproj", "{9BE2DAD3-EE88-4312-AC39-261DA5A945D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +21,6 @@ Global
 		{675106C5-64E2-487B-8A4E-3244BDE50424}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{675106C5-64E2-487B-8A4E-3244BDE50424}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{675106C5-64E2-487B-8A4E-3244BDE50424}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7E7D963F-F4C6-4C69-BEF9-DC35812EF35F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7E7D963F-F4C6-4C69-BEF9-DC35812EF35F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7E7D963F-F4C6-4C69-BEF9-DC35812EF35F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7E7D963F-F4C6-4C69-BEF9-DC35812EF35F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{793E0EEF-1100-40B1-9670-620FB5923852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{793E0EEF-1100-40B1-9670-620FB5923852}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{793E0EEF-1100-40B1-9670-620FB5923852}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{AA79B9E0-BC6E-47FD-B5DF-319B4052351A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA79B9E0-BC6E-47FD-B5DF-319B4052351A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA79B9E0-BC6E-47FD-B5DF-319B4052351A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BE2DAD3-EE88-4312-AC39-261DA5A945D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BE2DAD3-EE88-4312-AC39-261DA5A945D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BE2DAD3-EE88-4312-AC39-261DA5A945D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BE2DAD3-EE88-4312-AC39-261DA5A945D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
