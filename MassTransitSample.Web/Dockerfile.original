@@ -1,0 +1,20 @@
+FROM microsoft/dotnet:2.2-aspnetcore-runtime-stretch-slim AS base
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+
+FROM microsoft/dotnet:2.2-sdk-stretch AS build
+WORKDIR /src
+COPY ["MassTransitSample.Web/MassTransitSample.Web.csproj", "MassTransitSample.Web/"]
+RUN dotnet restore "MassTransitSample.Web/MassTransitSample.Web.csproj"
+COPY . .
+WORKDIR "/src/MassTransitSample.Web"
+RUN dotnet build "MassTransitSample.Web.csproj" -c Release -o /app
+
+FROM build AS publish
+RUN dotnet publish "MassTransitSample.Web.csproj" -c Release -o /app
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app .
+ENTRYPOINT ["dotnet", "MassTransitSample.Web.dll"]

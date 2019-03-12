@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3.7.12-management
+    ports:
+      - '15672:15672'
+      - '5672:5672'
+    hostname: rabbitmq
+    volumes:
+      - rabbitdata:/var/lib/rabbitmq
+    
+  masstransitsample.web:
+    image: ${DOCKER_REGISTRY-}masstransitsampleweb
+    build:
+      context: .
+      dockerfile: MassTransitSample.Web/Dockerfile
+    environment:
+      - RABBITCON=rabbitmq://rabbitmq/
+    ports:
+      - '8080:80'
+volumes:
+  rabbitdata:
