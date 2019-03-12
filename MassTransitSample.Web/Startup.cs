@@ -32,7 +32,6 @@ namespace MassTransitSample.Web
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-
             var builder = new ContainerBuilder();
             builder.AddMassTransit(x =>
             {
