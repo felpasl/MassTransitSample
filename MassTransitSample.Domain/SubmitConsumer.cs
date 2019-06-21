@@ -9,7 +9,6 @@ namespace MassTransitSample.Domain
     {
         public async Task Consume(ConsumeContext<Submit> context)
         {
-            throw new Exception("Error");
             await Console.Out.WriteLineAsync($"Submit Consumer: {context.Message.Id} - {context.Message.Message} ({context.CorrelationId})");
         }
     }
