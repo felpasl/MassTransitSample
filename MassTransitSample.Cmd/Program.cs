@@ -12,6 +12,8 @@ namespace MassTransitSample.Cmd
             builder.AddMassTransit(x =>
             {
                 x.AddConsumer<Domain.SubmitConsumer>();
+                x.AddConsumer<Domain.SubmitFaultConsumer>();
+
                 // add the bus to the container
                 x.AddBus(context => Bus.Factory.CreateUsingRabbitMq(cfg =>
                 {

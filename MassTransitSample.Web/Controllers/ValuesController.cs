@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MassTransit;
+using MassTransitSample.Domain;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MassTransitSample.Web.Controllers
@@ -17,11 +18,12 @@ namespace MassTransitSample.Web.Controllers
         {
             this.bus = busControl;
         }
+
         // GET api/values/5
         [HttpGet("{message}")]
         public async Task<IActionResult> Get(string message)
         {
-            await bus.Publish<Domain.Submit>(new Domain.Submit { Message = message });
+            await bus.Publish<Submit>(new Submit { Message = message });
             return Ok(message);
         }
     }
